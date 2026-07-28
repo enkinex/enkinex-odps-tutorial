@@ -1,4 +1,4 @@
-import enkinex_odps.product.input as input
+import enkinex_odps.product.input
 
 Payments1_0 = input.InputPort {
     name = "payments"
@@ -24,9 +24,9 @@ OnlineTransactions1_1 = input.InputPort {
     contractId = "ec2a112d-5cfe-49f3-8760-f9cfb4597547"
     tags = ["transactions"]
     customProperties = [
-        { property = "transactionsVersion", value = "1.1.0" }
+        {property = "transactionsVersion", value = "1.1.0"}
     ]
     authoritativeDefinitions = [
-        { $type = "data_dictionary", url = "https://mydata.retailcorp.example/dictionary" }
+        {$type = "data_dictionary", url = "https://mydata/dictionary"}
     ]
 }

@@ -1,4 +1,4 @@
-import enkinex_odps.management as management
+import enkinex_odps.management
 
 DictionaryUpdatesPort = management.ManagementPort {
     content = "dictionary"
@@ -7,9 +7,9 @@ DictionaryUpdatesPort = management.ManagementPort {
     description = "Kafka topic for dictionary updates"
     tags = ["kafka"]
     customProperties = [
-        { property = "kafkaTopic", value = True }
+        {property = "kafkaTopic", value = "true"}
     ]
     authoritativeDefinitions = [
-        { $type = "kafka_topic", url = "https://mykafka.retailcorp.example/topic" }
+        {$type = "kafka_topic", url = "https://mykafka/topic"}
     ]
 }

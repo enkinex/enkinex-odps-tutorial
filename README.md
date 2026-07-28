@@ -1,31 +1,70 @@
+[![Enkinex — Semantic & Governance as Code](https://raw.githubusercontent.com/enkinex/enkinex-odps/main/docs/images/enkinex-github-banner.png)](https://enkinex.org)
+
 # Enkinex ODPS Tutorial
 
-A hands-on port of the canonical [Open Data Product Standard](https://github.com/bitol-io/open-data-product-standard)
-[`customer-data-product.odps.yaml`](https://github.com/bitol-io/open-data-product-standard/blob/main/docs/examples/customer-data-product.odps.yaml)
-example into an equivalent, modular [KCL](https://www.kcl-lang.io/) project, using the Enkinex ODPS library.
+[![Standard](https://img.shields.io/badge/ODPS-v1.0.0-blue)](https://github.com/bitol-io/open-data-product-standard/tree/v1.0.0)
+[![KCL](https://img.shields.io/badge/KCL-%E2%89%A5%200.12.7-7B68EE)](https://www.kcl-lang.io/)
+[![Version](https://img.shields.io/badge/version-v1.0.0-green)](./CHANGELOG.md)
+[![License](https://img.shields.io/badge/license-Apache--2.0-green)](./LICENSE)
 
-Each page adds one more piece of the data product, building toward the finished project checked into this repo at
-[`example/customer-data-product/`](example/customer-data-product). By the end you'll have a typed, modular
-KCL project that renders to (and validates) the same ODPS document the upstream YAML describes.
+---
 
-## Pages
+## Getting Started with Enkinex ODPS
 
-1. [Introduction](01-introduction.md)
-2. [Installing KCL](02-installing-kcl.md)
-3. [Project & Module](03-project-module.md)
-4. [Product Metadata](04-product-metadata.md)
-5. [Team](05-team.md)
-6. [Input & Output Ports](06-ports.md)
-7. [Management Ports & Support](07-management-and-support.md)
-8. [Validating & Exporting](08-validating-and-exporting.md)
+Learn from the **[Enkinex ODPS Tutorial](https://enkinex.org/docs/governance/odps/tutorial/)** how to write a data
+product as a code project and export it to a YAML document.
 
-## Prerequisites
+**What you are going to learn:**
 
-- The [KCL CLI](https://www.kcl-lang.io/) installed (`kcl --version` should print `0.12.4` or newer — see
-  [Installing KCL](02-installing-kcl.md)).
-- No prior KCL experience is assumed, but basic familiarity with YAML and the shape of an ODPS document helps.
+1. **Installing KCL**: set up the KCL CLI on your machine.
+2. **Creating the Data Product Project Module**: initialize a KCL module, depend on [enkinex-odps](https://github.com/enkinex/enkinex-odps/tree/v1.0.0), and lay out a modular
+   project.
+3. **Declare the Data Product KCL Code**: author the data product as small, reusable typed KCL sources.
+4. **Parse and Export to YAML**: validate, print, and export the data product to YAML or JSON.
 
-For the finished, single-page reference document this tutorial builds toward, see the upstream
-[`customer-data-product.odps.yaml`](https://github.com/bitol-io/open-data-product-standard/blob/main/docs/examples/customer-data-product.odps.yaml).
-For the library's full schema reference, see [`docs/library/odps.md`](https://github.com/enkinex/enkinex-odps/blob/main/docs/library/odps.md) and the per-module design
-notes under [`docs/schemas/`](https://github.com/enkinex/enkinex-odps/tree/main/docs/schemas).
+## Requirements
+
+- [KCL Language CLI](https://www.kcl-lang.io/docs/user_docs/getting-started/install) `>= 0.12.7`
+- [`just` Command Runner](https://github.com/casey/just).
+
+Check both are on your `PATH`:
+
+```bash
+kcl --version
+just --version
+```
+
+## ODPS Tutorial Commands
+
+Common tasks are wrapped in the [`Justfile`](Justfile):
+
+```bash
+just init      # sync library module dependencies
+just export    # exports the KCL product.k to product.yaml
+just fmt       # formats every `.k` file in the project
+just lint      # Runs `kcl lint` against the root data product and every project directory
+```
+
+---
+
+## External References and Resources
+
+- **[Enkinex ODPS Library v.1.0.0](https://github.com/enkinex/enkinex-odps/tree/v1.0.0)**: The governance as code library for ODPS.
+- **Open Data Product Standard (ODPS) v1.0.0**: the
+  standard [GitHub project](https://github.com/bitol-io/open-data-product-standard/tree/v1.0.0).
+    - Standard JSON Schema: [`odps-json-schema-v1.0.0.json`](https://github.com/enkinex/enkinex-odps/blob/v1.0.0/odps-json-schema-v1.0.0.json)
+- **[KCL Language](https://www.kcl-lang.io/)**: the configuration & policy DSL used for the
+  implementation.
+
+---
+
+## Contributing
+
+Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) and the
+contributor list in [AUTHORS.md](AUTHORS.md).
+
+---
+
+## License
+
+Licensed under the Apache License 2.0 — see [LICENSE](LICENSE).

@@ -1,4 +1,4 @@
-import enkinex_odps.common as common
+import enkinex_odps.common
 
 ProductDescription = common.Description {
     purpose = "Enterprise view of a customer."
