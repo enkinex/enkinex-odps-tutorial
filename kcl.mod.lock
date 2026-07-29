@@ -1,7 +1,7 @@
 [dependencies]
-  [dependencies.enkinex-odps]
-    name = "enkinex-odps"
+  [dependencies.enkinex_odps]
+    name = "enkinex_odps"
     full_name = "enkinex-odps_1.0.0"
     version = "1.0.0"
     url = "https://github.com/enkinex/enkinex-odps"
-    commit = "73f3509"
+    git_tag = "v1.0.0"

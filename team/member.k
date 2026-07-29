@@ -1,4 +1,4 @@
-import enkinex_odps.team as team
+import enkinex_odps.team
 
 JohnDoe = team.TeamMember {
     username = "john.doe@retailcorp.com"

@@ -1,4 +1,4 @@
-import enkinex_odps.support as support
+import enkinex_odps.support
 
 DataTeamSlack = support.Support {
     channel = "Data Team Slack"

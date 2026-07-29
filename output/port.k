@@ -1,4 +1,4 @@
-import enkinex_odps.product.output as output
+import enkinex_odps.product.output
 
 RawTransactions1_0 = output.OutputPort {
     name = "rawtransactions"
@@ -16,17 +16,17 @@ RawTransactions2_0 = output.OutputPort {
     contractId = "c2798941-1b7e-4b03-9e0d-955b1a872b33"
     tags = ["transactions"]
     customProperties = [
-        { property = "transactionsVersion", value = "2.0.0" }
+        {property = "transactionsVersion", value = "2.0.0"}
     ]
     authoritativeDefinitions = [
-        { $type = "data_dictionary", url = "https://mydata.retailcorp.example/dictionary" }
+        {$type = "data_dictionary", url = "https://mydata/dictionary"}
     ]
     sbom = [
-        { $type = "external", url = "https://mysbomserver.retailcorp.example/mysbom" }
+        {$type = "external", url = "https://mysbomserver/mysbom"}
     ]
     inputContracts = [
-        { id = "dbb7b1eb-7628-436e-8914-2a00638ba6db", version = "2.0.0" }
-        { id = "ec2a112d-5cfe-49f3-8760-f9cfb4597544", version = "1.0.0" }
+        {id = "dbb7b1eb-7628-436e-8914-2a00638ba6db", version = "2.0.0"}
+        {id = "ec2a112d-5cfe-49f3-8760-f9cfb4597544", version = "1.0.0"}
     ]
 }
 
