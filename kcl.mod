@@ -1,6 +1,6 @@
 [package]
 name = "enkinex-odps-tutorial"
-edition = "0.12.7"
+edition = "0.12.8"
 version = "1.0.0"
 description = "Enkinex ODPS Tutorial"
 
