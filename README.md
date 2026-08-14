@@ -3,7 +3,7 @@
 # Enkinex ODPS Tutorial
 
 [![Standard](https://img.shields.io/badge/ODPS-v1.0.0-blue)](https://github.com/bitol-io/open-data-product-standard/tree/v1.0.0)
-[![KCL](https://img.shields.io/badge/KCL-%E2%89%A5%200.12.7-7B68EE)](https://www.kcl-lang.io/)
+[![KCL](https://img.shields.io/badge/KCL-%E2%89%A5%200.12.8-7B68EE)](https://www.kcl-lang.io/)
 [![Version](https://img.shields.io/badge/version-v1.0.0-green)](./CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-Apache--2.0-green)](./LICENSE)
 
@@ -24,7 +24,7 @@ product as a code project and export it to a YAML document.
 
 ## Requirements
 
-- [KCL Language CLI](https://www.kcl-lang.io/docs/user_docs/getting-started/install) `>= 0.12.7`
+- [KCL Language CLI](https://www.kcl-lang.io/docs/user_docs/getting-started/install) `>= 0.12.8`
 - [`just` Command Runner](https://github.com/casey/just).
 
 Check both are on your `PATH`:
